@@ -1,0 +1,42 @@
+@media print {
+  body {
+    background: white !important;
+  }
+
+  .report-layout {
+    display: block;
+    padding: 0;
+  }
+
+  .report-main {
+    width: 100%;
+  }
+
+  #executive-summary {
+    page-break-after: always;
+  }
+
+  .report-section {
+    page-break-inside: avoid;
+    margin-bottom: 30px;
+  }
+
+  .findings-grid {
+    display: block;
+  }
+
+  .findings-grid > * {
+    margin-bottom: 20px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@page {
+  margin: 1.5cm;
+}
