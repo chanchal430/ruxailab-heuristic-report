@@ -103,10 +103,6 @@ src/
  └── view/
       └── ReportView.vue
 
-Folder	Purpose
-components	reusable UI
-data	mock data
-view	page-level container
 ```
 
 
@@ -117,24 +113,38 @@ Each section is implemented as a reusable component to maintain clear separation
 ## 📸 Screenshots
 
 <p align="center">
-  <a href="docs/report-overview.png">
-    <img src="docs/report-overview.png" alt="Report Overview" width="300"/>
+  <a href="docs/report-header.png">
+    <img src="docs/report-header.png" alt="Report Header" width="700"/>
   </a><br/>
-  <em>Figure 1: Report Overview</em>
+  <em>Figure 1: Report Header</em>
+</p>
+
+<p align="center">
+  <a href="docs/report-overview.png">
+    <img src="docs/report-overview.png" alt="Report Overview" width="700"/>
+  </a><br/>
+  <em>Figure 2: Report Overview</em>
 </p>
 
 <p align="center">
   <a href="docs/executive-summary.png">
-    <img src="docs/executive-summary.png" alt="Executive Summary" width="300"/>
+    <img src="docs/executive-summary.png" alt="Executive Summary" width="700"/>
   </a><br/>
-  <em>Figure 2: Executive Summary</em>
+  <em>Figure 3: Executive Summary</em>
 </p>
 
 <p align="center">
-  <a href="docs/findings-grid.png">
-    <img src="docs/findings-grid.png" alt="Findings Grid" width="300"/>
+  <a href="docs/findings.png">
+    <img src="docs/findings.png" alt="Findings Grid" width="700"/>
   </a><br/>
-  <em>Figure 3: Findings Grid</em>
+  <em>Figure 4: Findings Grid</em>
+</p>
+
+<p align="center">
+  <a href="docs/conclusion+appendix.png">
+    <img src="docs/conclusion+appendix.png" alt="Appendix" width="700"/>
+  </a><br/>
+  <em>Figure 5: Appendix</em>
 </p>
 
 ## ⚙️ Technologies Used
