@@ -27,7 +27,8 @@ export const reportData = {
 
   heuristics: [
     {
-      name: 'H1: System Status',
+      id: 'H1',
+      name: 'System Status',
       percentage: 70,
       questions: [
         {
@@ -39,7 +40,8 @@ export const reportData = {
       ],
     },
     {
-      name: 'H2: Real-world Match',
+      id: 'H2',
+      name: 'Real-world Match',
       percentage: 50,
       questions: [
         {
@@ -51,7 +53,8 @@ export const reportData = {
       ],
     },
     {
-      name: 'H3: User Control',
+      id: 'H3',
+      name: 'User Control and Freedom',
       percentage: 30,
       questions: [
         {
@@ -63,7 +66,8 @@ export const reportData = {
       ],
     },
     {
-      name: 'H4: Consistency',
+      id: 'H4',
+      name: 'Consistency & Standards',
       percentage: 15,
       questions: [
         {
@@ -80,7 +84,7 @@ export const reportData = {
     {
       title: 'Users cannot undo actions',
       severity: 'Critical',
-      heuristic: 'User Control & Freedom',
+      heuristic: 'H3',
       evidence: 'Deleting a workout permanently removes data.',
       recommendation: 'Add undo functionality or confirmation dialog.',
       image: ev1,
@@ -88,14 +92,14 @@ export const reportData = {
     {
       title: 'Inconsistent navigation',
       severity: 'Major',
-      heuristic: 'Consistency & Standards',
+      heuristic: 'H4',
       evidence: 'Bottom navigation differs across screens.',
       recommendation: 'Use a consistent navigation bar.',
     },
     {
       title: 'Inconsistent iconography',
       severity: 'Minor',
-      heuristic: 'Consistency & Standards',
+      heuristic: 'H2',
       evidence: 'Save icon changes between screens.',
       recommendation: 'Standardize icons using design system.',
     },

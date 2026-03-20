@@ -96,7 +96,10 @@
       <!-- FINDINGS -->
       <section id="findings" class="report-section findings-area">
         <div class="sticky-filters">
-          <Filters v-model="activeFilters" />
+          <Filters 
+           v-model="activeFilters"
+           :heuristics="report.heuristics"
+          />
 
           <div class="results-meta">
             Showing <strong>{{ filteredFindings.length }}</strong> of
@@ -109,7 +112,10 @@
             <FindingCard
               v-for="finding in filteredFindings"
               :key="finding.title"
-              v-bind="finding"
+              v-bind="{
+                ...finding,
+              heuristic: getHeuristicName(finding.heuristic)
+              }" 
               @open="selectedFinding = finding"
             />
           </transition-group>
@@ -163,6 +169,10 @@
 
   const report = reportData
   const selectedFinding = ref(null)
+
+  const getHeuristicName = (id) => {
+    return report.heuristics.find(h => h.id === id)?.name
+  }
 
   /* FILTER STATE */
   const activeFilters = ref({

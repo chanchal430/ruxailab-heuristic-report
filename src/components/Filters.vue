@@ -21,8 +21,10 @@
         :value="modelValue.heuristic"
         @change="updateFilter('heuristic', $event.target.value)"
       >
-        <option v-for="h in heuristicOptions" :key="h" :value="h">
-          {{ h }}
+        <option 
+          v-for="h in heuristicOptions" :key="h.value" 
+          :value="h.value">
+          {{ h.label }}
         </option>
       </select>
     </div>
@@ -35,16 +37,21 @@
       type: Object,
       default: () => ({ severity: 'All', heuristic: 'All' }),
     },
+    heuristics: {
+      type: Array,
+      default: () => [],
+    },
   })
 
   const emit = defineEmits(['update:modelValue'])
 
   const severityOptions = ['All', 'Critical', 'Major', 'Minor']
   const heuristicOptions = [
-    'All',
-    'User Control and Freedom',
-    'Consistency',
-    'Error Prevention',
+    {label: 'All',value: 'All',},
+    ...props.heuristics.map(h => ({
+      label: h.name,
+      value: h.id,
+    }))
   ]
 
   const updateFilter = (key, value) => {
